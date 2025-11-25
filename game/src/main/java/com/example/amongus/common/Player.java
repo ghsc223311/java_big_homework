@@ -46,6 +46,6 @@ public class Player {
     public boolean isImpostor() { return isImpostor; }
     public void setImpostor(boolean impostor) { isImpostor = impostor; }
     public void setAlive(boolean alive) { isAlive = alive; }
-    public int getTasksCompleted() { return tasksCompleted; }
-    public int getTotalTasks() { return totalTasks; }
+    public int getTasksCompleted() { return taskCompleted; }
+    public int getTotalTasks() { return totalTask; }
 }
