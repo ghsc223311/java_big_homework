@@ -1,30 +1,22 @@
-package main.java.com.example.common;
+package com.example.common;
 
 import java.io.Serializable;
 
-public class Message {
-     private static final long serialVersionUID = 1L;
-    
-    public enum Type {
-        PLAYER_JOIN,        // 玩家加入
-        PLAYER_READY,       // 玩家準備
-        PLAYER_CHOICE,      // 玩家選擇
-        GAME_RESULT,        // 遊戲結果
-        CHAT_MESSAGE        // 聊天消息
-    }
+public class Message implements Serializable {
+    public enum Type { JOIN, READY, CHOICE, RESULT, CHAT, QUIT }
     
     private Type type;
-    private String playerId;
+    private String playerName;
     private Object data;
     
-    public Message(Type type, String playerId, Object data) {
+    public Message(Type type, String playerName, Object data) {
         this.type = type;
-        this.playerId = playerId;
+        this.playerName = playerName;
         this.data = data;
     }
     
-    // Getters and Setters
+    // Getter方法
     public Type getType() { return type; }
-    public String getPlayerId() { return playerId; }
+    public String getPlayerName() { return playerName; }
     public Object getData() { return data; }
 }
