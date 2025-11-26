@@ -23,6 +23,17 @@ cd game
 mvn compile exec:java -Dexec.mainClass="com.example.RPSGame"
 ```
 
+**注意：在 Windows 系統中，如果上述命令出現問題，請使用以下格式：**
+```bash
+cd game
+mvn compile exec:java "-Dexec.mainClass=com.example.server.GameServer"
+```
+
+```bash
+cd game
+mvn compile exec:java "-Dexec.mainClass=com.example.RPSGame"
+```
+
 ## 項目結構
 
 ```
