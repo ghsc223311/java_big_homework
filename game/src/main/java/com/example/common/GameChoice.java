@@ -1,6 +1,8 @@
 package com.example.common;
 
-public enum GameChoice {
+import java.io.Serializable;
+
+public enum GameChoice implements Serializable {
     ROCK("石頭", "✊"),
     PAPER("布", "✋"), 
     SCISSORS("剪刀", "✌️");
